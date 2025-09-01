@@ -1,0 +1,2145 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/tdprepview/api_reference__pipeline/">
+      
+      
+        <link rel="prev" href="../user_guide__automatic_data_prep/">
+      
+      
+        <link rel="next" href="../api_reference__auto_code/">
+      
+      
+      <link rel="icon" href="../img/icon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Pipeline - tdprepview docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../css/mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Pipeline - tdprepview docs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://github.com/tdprepview/assets/images/social/api_reference__pipeline.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://github.com/tdprepview/api_reference__pipeline/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Pipeline - tdprepview docs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://github.com/tdprepview/assets/images/social/api_reference__pipeline.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tdprepview.Pipeline" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="tdprepview docs" class="md-header__button md-logo" aria-label="tdprepview docs" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            tdprepview docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pipeline
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="tdprepview docs" class="md-nav__button md-logo" aria-label="tdprepview docs" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    tdprepview docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_guide__the_pipeline_class/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Pipeline Class
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_guide__automatic_data_prep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automatic Data Prep
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Pipeline
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipeline
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tdprepview.Pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Pipeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tdprepview.Pipeline.fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;fit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tdprepview.Pipeline.transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;transform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tdprepview.Pipeline.plot_sankey" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;plot_sankey
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tdprepview.Pipeline.to_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;to_dict
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tdprepview.Pipeline.from_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;from_dict
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tdprepview.Pipeline.to_json" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;to_json
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tdprepview.Pipeline.from_json" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;from_json
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tdprepview.Pipeline.from_DataFrame" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;from_DataFrame
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_reference__auto_code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    auto_code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_reference__preprocessors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Preprocessors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Advanced Topics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced Topics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced_topics__alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alternatives to tdprepview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced_topics__mcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MCP [coming soon]
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tdprepview.Pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Pipeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tdprepview.Pipeline.fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;fit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tdprepview.Pipeline.transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;transform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tdprepview.Pipeline.plot_sankey" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;plot_sankey
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tdprepview.Pipeline.to_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;to_dict
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tdprepview.Pipeline.from_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;from_dict
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tdprepview.Pipeline.to_json" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;to_json
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tdprepview.Pipeline.from_json" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;from_json
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tdprepview.Pipeline.from_DataFrame" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;from_DataFrame
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Pipeline</h1>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="tdprepview.Pipeline" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">tdprepview.Pipeline</span>
+
+
+<a href="#tdprepview.Pipeline" class="headerlink" title="Permanent link">#</a></h2>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents first">
+
+
+        <p>A data processing pipeline consisting of a sequence of steps. Each step is a tuple
+of input columns, preprocessors, and optional renaming options. During fitting, a
+directed acyclic graph (DAG) is generated to represent the execution order.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>steps</code>
+            </td>
+            <td>
+                  <code><span title="typing.List">List</span>[<span title="tdprepview.pipeline._pipeline.Step">Step</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A list of tuples representing the steps of the pipeline. Each tuple must have 2 or 3 elements.</p>
+<ol>
+<li>
+<p>The first element specifies the input columns:</p>
+<ul>
+<li><code>str</code>: a single column name</li>
+<li><code>list[str]</code>: a list of column names</li>
+<li><code>dict</code>: a dictionary with keys among
+  <code>{"prefix","suffix","pattern","dtype_include","dtype_exclude","columns_exclude"}</code>,
+  whose values are strings or lists of strings. These act as selectors for matching columns.</li>
+</ul>
+</li>
+<li>
+<p>The second element specifies the preprocessors:</p>
+<ul>
+<li>A single <code>Preprocessor</code> instance</li>
+<li>A list of <code>Preprocessor</code> instances. If multiple are provided, they are applied sequentially.</li>
+</ul>
+</li>
+<li>
+<p>The third element (optional) is a dict of naming options:</p>
+<ul>
+<li><code>"prefix"</code>: str to prepend to the output column names</li>
+<li><code>"suffix"</code>: str to append to the output column names</li>
+</ul>
+</li>
+</ol>
+<p>Renaming makes it easier to reference transformed columns in later steps,
+especially when output names are otherwise controlled by the preprocessing logic.</p>
+<p>Examples of valid steps:</p>
+<ul>
+<li>(input_col, preprocessor)</li>
+<li>(input_cols_list, preprocessor)</li>
+<li>(input_col_dict, preprocessor)</li>
+<li>(input_col, preprocessor, options_dict)</li>
+<li>(input_cols_list, [preprocessor1, preprocessor2], options_dict)</li>
+</ul>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <p>Single-step pipelines:</p>
+<ol>
+<li>
+<p>Single column with one preprocessor:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([(</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="n">Impute</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">))])</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Multiple columns with one preprocessor:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([([</span><span class="s2">&quot;height&quot;</span><span class="p">,</span><span class="s2">&quot;weight&quot;</span><span class="p">],</span> <span class="n">Scale</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;zscore&quot;</span><span class="p">))])</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Column selection by dtype with multiple preprocessors, plus renaming:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="p">({</span><span class="s2">&quot;dtype_include&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;int&quot;</span><span class="p">]},</span> <span class="p">[</span><span class="n">Impute</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">),</span> <span class="n">Scale</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;minmax&quot;</span><span class="p">)],</span> <span class="p">{</span><span class="s2">&quot;suffix&quot;</span><span class="p">:</span> <span class="s2">&quot;_scaled&quot;</span><span class="p">})</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">])</span>
+</span></code></pre></div></p>
+</li>
+</ol>
+<p>Multi-step pipelines:</p>
+<ol>
+<li>
+<p>Different columns, different preprocessors, no renaming:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="p">([</span><span class="s2">&quot;age&quot;</span><span class="p">,</span><span class="s2">&quot;salary&quot;</span><span class="p">],</span> <span class="n">Impute</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">)),</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="p">([</span><span class="s2">&quot;height&quot;</span><span class="p">,</span><span class="s2">&quot;weight&quot;</span><span class="p">],</span> <span class="n">Scale</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;zscore&quot;</span><span class="p">)),</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="p">(</span><span class="s2">&quot;city&quot;</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">categories</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">))</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">])</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Regex/pattern selection feeding into PCA:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="p">({</span><span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;num_&quot;</span><span class="p">},</span> <span class="p">[</span><span class="n">Scale</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;zscore&quot;</span><span class="p">),</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">3</span><span class="p">)],</span> <span class="p">{</span><span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;pca_&quot;</span><span class="p">}),</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="p">({</span><span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;pca_&quot;</span><span class="p">},</span> <span class="n">Normalizer</span><span class="p">()),</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">])</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Multi-preprocessor step followed by categorical encoding:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="p">([</span><span class="s2">&quot;income&quot;</span><span class="p">],</span> <span class="p">[</span><span class="n">Impute</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">),</span> <span class="n">Scale</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;zscore&quot;</span><span class="p">)]),</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="p">([</span><span class="s2">&quot;city&quot;</span><span class="p">,</span><span class="s2">&quot;state&quot;</span><span class="p">],</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">categories</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">))</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">])</span>
+</span></code></pre></div></p>
+</li>
+</ol>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <ul>
+<li>Each step defines what columns are selected, what transformations are applied,
+  and optionally how output columns are renamed.</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+<p><span class="doc-section-title">Methods:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+            <tr class="doc-section-item">
+              <td><code><a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-method&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;fit&lt;/span&gt; (&lt;code&gt;tdprepview.Pipeline.fit&lt;/code&gt;)" href="#tdprepview.Pipeline.fit">fit</a></code></td>
+              <td>
+                <div class="doc-md-description">
+                  <p>Fit the pipeline to the given data step by step.</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="doc-section-item">
+              <td><code><a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-method&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;transform&lt;/span&gt; (&lt;code&gt;tdprepview.Pipeline.transform&lt;/code&gt;)" href="#tdprepview.Pipeline.transform">transform</a></code></td>
+              <td>
+                <div class="doc-md-description">
+                  <p>Apply the transformations in the pipeline to the input data.</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="doc-section-item">
+              <td><code><a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-method&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;plot_sankey&lt;/span&gt; (&lt;code&gt;tdprepview.Pipeline.plot_sankey&lt;/code&gt;)" href="#tdprepview.Pipeline.plot_sankey">plot_sankey</a></code></td>
+              <td>
+                <div class="doc-md-description">
+                  <p>Plot the DAG (directed acyclic graph) of the pipeline using a Sankey diagram.</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="doc-section-item">
+              <td><code><a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-method&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;to_dict&lt;/span&gt; (&lt;code&gt;tdprepview.Pipeline.to_dict&lt;/code&gt;)" href="#tdprepview.Pipeline.to_dict">to_dict</a></code></td>
+              <td>
+                <div class="doc-md-description">
+                  <p>Serialize a fitted Pipeline to a Python dictionary.</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="doc-section-item">
+              <td><code><a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-method&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;from_dict&lt;/span&gt;
+
+
+  &lt;span class=&quot;doc doc-labels&quot;&gt;
+      &lt;small class=&quot;doc doc-label doc-label-classmethod&quot;&gt;&lt;code&gt;classmethod&lt;/code&gt;&lt;/small&gt;
+  &lt;/span&gt; (&lt;code&gt;tdprepview.Pipeline.from_dict&lt;/code&gt;)" href="#tdprepview.Pipeline.from_dict">from_dict</a></code></td>
+              <td>
+                <div class="doc-md-description">
+                  <p>Construct a Pipeline object from a serialized dictionary.</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="doc-section-item">
+              <td><code><a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-method&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;to_json&lt;/span&gt; (&lt;code&gt;tdprepview.Pipeline.to_json&lt;/code&gt;)" href="#tdprepview.Pipeline.to_json">to_json</a></code></td>
+              <td>
+                <div class="doc-md-description">
+                  <p>Serialize the fitted Pipeline to a JSON file.</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="doc-section-item">
+              <td><code><a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-method&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;from_json&lt;/span&gt;
+
+
+  &lt;span class=&quot;doc doc-labels&quot;&gt;
+      &lt;small class=&quot;doc doc-label doc-label-classmethod&quot;&gt;&lt;code&gt;classmethod&lt;/code&gt;&lt;/small&gt;
+  &lt;/span&gt; (&lt;code&gt;tdprepview.Pipeline.from_json&lt;/code&gt;)" href="#tdprepview.Pipeline.from_json">from_json</a></code></td>
+              <td>
+                <div class="doc-md-description">
+                  <p>Construct a Pipeline object from a JSON file.</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="doc-section-item">
+              <td><code><a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-method&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-function-name&quot;&gt;from_DataFrame&lt;/span&gt;
+
+
+  &lt;span class=&quot;doc doc-labels&quot;&gt;
+      &lt;small class=&quot;doc doc-label doc-label-classmethod&quot;&gt;&lt;code&gt;classmethod&lt;/code&gt;&lt;/small&gt;
+  &lt;/span&gt; (&lt;code&gt;tdprepview.Pipeline.from_DataFrame&lt;/code&gt;)" href="#tdprepview.Pipeline.from_DataFrame">from_DataFrame</a></code></td>
+              <td>
+                <div class="doc-md-description">
+                  <p>Construct a new Pipeline object from a teradataml DataFrame or database table/view.</p>
+                </div>
+              </td>
+            </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="tdprepview.Pipeline.fit" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">fit</span>
+
+
+<a href="#tdprepview.Pipeline.fit" class="headerlink" title="Permanent link">#</a></h3>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">fit</span><span class="p">(</span><span class="n">DF</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">schema_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">table_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Fit the pipeline to the given data step by step.</p>
+<p>At each step, it is decided whether statistics need to be collected from Vantage.
+The directed acyclic graph (DAG) is then incrementally constructed by adding nodes
+to the previous layer.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>DF</code>
+            </td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="teradataml.DataFrame">DataFrame</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The input DataFrame. If not provided, the DataFrame is loaded from the specified
+schema and table.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>schema_name</code>
+            </td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The schema name where the table is located. Required if <code>DF</code> is not provided.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>table_name</code>
+            </td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The table name to load. Required if <code>DF</code> is not provided.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <p>Fit the pipeline with a DataFrame:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">tdprepview</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">tdprepview.preprocessing</span> <span class="kn">import</span> <span class="n">Cast</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([(</span><span class="s2">&quot;col1&quot;</span><span class="p">,</span> <span class="n">Cast</span><span class="p">(</span><span class="s2">&quot;FLOAT&quot;</span><span class="p">))])</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">pl</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">DF</span><span class="o">=</span><span class="n">my_dataframe</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Fit the pipeline by loading from schema and table:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([(</span><span class="s2">&quot;col1&quot;</span><span class="p">,</span> <span class="n">Cast</span><span class="p">(</span><span class="s2">&quot;FLOAT&quot;</span><span class="p">))])</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">pl</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">schema_name</span><span class="o">=</span><span class="s2">&quot;my_schema&quot;</span><span class="p">,</span> <span class="n">table_name</span><span class="o">=</span><span class="s2">&quot;my_table&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="tdprepview.Pipeline.transform" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">transform</span>
+
+
+<a href="#tdprepview.Pipeline.transform" class="headerlink" title="Permanent link">#</a></h3>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">transform</span><span class="p">(</span><span class="n">DF</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">schema_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">table_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">return_type</span><span class="o">=</span><span class="s1">&#39;df&#39;</span><span class="p">,</span> <span class="n">create_replace_view</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">output_schema_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">output_view_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Apply the transformations in the pipeline to the input data.</p>
+<p>The directed acyclic graph (DAG), constructed during fitting based on the
+pipeline steps, is traversed and the corresponding SQL statements are appended.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>DF</code>
+            </td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="teradataml.DataFrame">DataFrame</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Input data. If not provided, data will be fetched from the specified
+<code>schema_name</code> and <code>table_name</code>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>schema_name</code>
+            </td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Schema name of the input data. Required if <code>DF</code> is not provided.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>table_name</code>
+            </td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Table name of the input data. Required if <code>DF</code> is not provided.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>return_type</code>
+            </td>
+            <td>
+                  <code><span title="typing.Literal">Literal</span>[&#39;df&#39;, &#39;str&#39;, None]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Specifies the return type of the transformation:
+- <code>"df"</code>: return a <code>tdml.DataFrame</code>
+- <code>"str"</code>: return a SQL query string
+- <code>None</code>: return nothing</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;df&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>create_replace_view</code>
+            </td>
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If True, create or replace a view with the transformed
+data in the database.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>output_schema_name</code>
+            </td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Schema name of the output view. Required if
+<code>create_replace_view</code> is True.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>output_view_name</code>
+            </td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>View name of the output. Required if <code>create_replace_view</code> is True.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.Union">Union</span>[<span title="teradataml.DataFrame">DataFrame</span>, <span title="str">str</span>, None]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Transformed data as a <code>tdml.DataFrame</code> if <code>return_type="df"</code>,</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.Union">Union</span>[<span title="teradataml.DataFrame">DataFrame</span>, <span title="str">str</span>, None]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>a SQL query string if <code>return_type="str"</code>, or <code>None</code> if <code>return_type</code> is <code>None</code>.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <ul>
+<li>Using <code>create_replace_view=True</code> acts like a "secret deploy button":
+  it crystallizes the preprocessing logic into a database view.</li>
+</ul>
+</details>
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <p>Transform data and return a DataFrame (default):</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">DF_transformed</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">DF</span><span class="o">=</span><span class="n">DF_input</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Transform data and return the SQL query string:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">sql_query</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">DF</span><span class="o">=</span><span class="n">DF_input</span><span class="p">,</span> <span class="n">return_type</span><span class="o">=</span><span class="s2">&quot;str&quot;</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">sql_query</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Transform data by fetching directly from schema and table:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">DF_transformed</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">schema_name</span><span class="o">=</span><span class="s2">&quot;myschema&quot;</span><span class="p">,</span> <span class="n">table_name</span><span class="o">=</span><span class="s2">&quot;mytable&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Deploy transformations as a database view:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">pl</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">DF</span><span class="o">=</span><span class="n">my_df</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">return_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">create_replace_view</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">output_schema_name</span><span class="o">=</span><span class="s2">&quot;deploy_schema&quot;</span><span class="p">,</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">output_view_name</span><span class="o">=</span><span class="s2">&quot;processed_view&quot;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">)</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">DF_transformed</span> <span class="o">=</span> <span class="n">tdml</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">tdml</span><span class="o">.</span><span class="n">in_schema</span><span class="p">(</span><span class="s2">&quot;deploy_schema&quot;</span><span class="p">,</span><span class="s2">&quot;processed_view&quot;</span><span class="p">))</span>
+</span></code></pre></div>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="tdprepview.Pipeline.plot_sankey" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">plot_sankey</span>
+
+
+<a href="#tdprepview.Pipeline.plot_sankey" class="headerlink" title="Permanent link">#</a></h3>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">plot_sankey</span><span class="p">()</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Plot the DAG (directed acyclic graph) of the pipeline using a Sankey diagram.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="plotly.graph_objs._figure.Figure">Figure</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>plotly.graph_objs._figure.Figure: Sankey plot of the DAG pipeline.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <p>Fit a simple pipeline and plot the DAG as a Sankey diagram:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">tdprepview</span> <span class="kn">import</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">Cast</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([(</span><span class="s2">&quot;col1&quot;</span><span class="p">,</span> <span class="n">Cast</span><span class="p">(</span><span class="s2">&quot;FLOAT&quot;</span><span class="p">))])</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">pl</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">DF</span><span class="o">=</span><span class="n">DF_input</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">plot_sankey</span><span class="p">()</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="tdprepview.Pipeline.to_dict" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">to_dict</span>
+
+
+<a href="#tdprepview.Pipeline.to_dict" class="headerlink" title="Permanent link">#</a></h3>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">to_dict</span><span class="p">()</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Serialize a fitted Pipeline to a Python dictionary.</p>
+<p>This method asserts that the Pipeline instance is already fitted. The resulting
+dictionary can be used to reconstruct the Pipeline object with the <code>from_dict</code> class method.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>dict</code></td>            <td>
+                  <code><span title="dict">dict</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary representation of the fitted Pipeline, suitable for serialization.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">tdprepview</span> <span class="kn">import</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">SimpleImputer</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([(</span><span class="s2">&quot;col1&quot;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">))])</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">pl</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">DF</span><span class="o">=</span><span class="n">my_dataframe</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">pl_dict</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+</span></code></pre></div>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="tdprepview.Pipeline.from_dict" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">from_dict</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#tdprepview.Pipeline.from_dict" class="headerlink" title="Permanent link">#</a></h3>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">from_dict</span><span class="p">(</span><span class="n">pipeline_serialized_dict</span><span class="p">)</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Construct a Pipeline object from a serialized dictionary.</p>
+<p>This class method deserializes a dictionary into a new Pipeline instance, initializing
+its properties and state based on the serialized data.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>pipeline_serialized_dict</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary containing serialized Pipeline data.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>Pipeline</code></td>            <td>
+                  <code><a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;tdprepview.Pipeline&lt;/span&gt; (&lt;code&gt;tdprepview.pipeline._pipeline.Pipeline&lt;/code&gt;)" href="#tdprepview.Pipeline">Pipeline</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A new (fitted) Pipeline instance initialized with the data from the serialized dictionary.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">tdprepview</span> <span class="kn">import</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">SimpleImputer</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([(</span><span class="s2">&quot;col1&quot;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">))])</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">pl</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">DF</span><span class="o">=</span><span class="n">my_dataframe</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">pl_dict</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">pl_new</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">pl_dict</span><span class="p">)</span>
+</span></code></pre></div>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="tdprepview.Pipeline.to_json" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">to_json</span>
+
+
+<a href="#tdprepview.Pipeline.to_json" class="headerlink" title="Permanent link">#</a></h3>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">to_json</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Serialize the fitted Pipeline to a JSON file.</p>
+<p>This method serializes the Pipeline into a dictionary and then saves it as a JSON file
+at the specified filepath. The Pipeline must be fitted before calling this method.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>filepath</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The path, including the filename, where the serialized Pipeline should be stored.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">tdprepview</span> <span class="kn">import</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">SimpleImputer</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([(</span><span class="s2">&quot;col1&quot;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">))])</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">pl</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">DF</span><span class="o">=</span><span class="n">my_dataframe</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">pl</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="s2">&quot;pipeline.json&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="tdprepview.Pipeline.from_json" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">from_json</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#tdprepview.Pipeline.from_json" class="headerlink" title="Permanent link">#</a></h3>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">from_json</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Construct a Pipeline object from a JSON file.</p>
+<p>This class method reads a JSON file specified by <code>filepath</code>, deserializes it into a
+dictionary, and then uses that dictionary to construct a new Pipeline instance via
+the <code>from_dict</code> method.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>filepath</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Path to the JSON file containing serialized Pipeline data.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>Pipeline</code></td>            <td>
+                  <code><a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;tdprepview.Pipeline&lt;/span&gt; (&lt;code&gt;tdprepview.pipeline._pipeline.Pipeline&lt;/code&gt;)" href="#tdprepview.Pipeline">Pipeline</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A new Pipeline instance initialized with the data from the JSON file.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">tdprepview</span> <span class="kn">import</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">SimpleImputer</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([(</span><span class="s2">&quot;col1&quot;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">))])</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">pl</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">DF</span><span class="o">=</span><span class="n">my_dataframe</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">pl</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="s2">&quot;pipeline.json&quot;</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">pl_new</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="s2">&quot;pipeline.json&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="tdprepview.Pipeline.from_DataFrame" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">from_DataFrame</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#tdprepview.Pipeline.from_DataFrame" class="headerlink" title="Permanent link">#</a></h3>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">from_DataFrame</span><span class="p">(</span><span class="n">DF</span><span class="p">,</span> <span class="n">input_schema</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">input_table</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">non_feature_cols</span><span class="o">=</span><span class="p">[],</span> <span class="n">fit_pipeline</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Construct a new Pipeline object from a teradataml DataFrame or database table/view.</p>
+<p>This method uses the <code>auto_code</code> heuristics to generate a sequence of preprocessing steps
+based on the data's characteristics and schema. The resulting Pipeline can optionally be
+fitted immediately.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>DF</code>
+            </td>
+            <td>
+                  <code><span title="teradataml.DataFrame">DataFrame</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The DataFrame used to determine preprocessing steps.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>input_schema</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Schema name of the input data. Defaults to "".</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>input_table</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Table or view name of the input data. Defaults to "".</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>non_feature_cols</code>
+            </td>
+            <td>
+                  <code><span title="list">list</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Column names to exclude from feature processing
+(e.g., primary keys, target variables). Defaults to [].</p>
+              </div>
+            </td>
+            <td>
+                  <code>[]</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>fit_pipeline</code>
+            </td>
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If True, fit the constructed Pipeline to the DataFrame
+before returning. Defaults to False.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>Pipeline</code></td>            <td>
+                  <code><a class="autorefs autorefs-internal" title="&lt;code class=&quot;doc-symbol doc-symbol-heading doc-symbol-class&quot;&gt;&lt;/code&gt;            &lt;span class=&quot;doc doc-object-name doc-class-name&quot;&gt;tdprepview.Pipeline&lt;/span&gt; (&lt;code&gt;tdprepview.pipeline._pipeline.Pipeline&lt;/code&gt;)" href="#tdprepview.Pipeline">Pipeline</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A new Pipeline instance, optionally fitted to the DataFrame.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">tdprepview</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="o">.</span><span class="n">from_DataFrame</span><span class="p">(</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">DF</span><span class="o">=</span><span class="n">my_dataframe</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">non_feature_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;target_category&quot;</span><span class="p">],</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">fit_pipeline</span><span class="o">=</span><span class="kc">True</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
+</span></code></pre></div>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../user_guide__automatic_data_prep/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Automatic Data Prep">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Automatic Data Prep
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../api_reference__auto_code/" class="md-footer__link md-footer__link--next" aria-label="Next: auto_code">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                auto_code
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - 2025 Martin Hillebrand
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://pypi.org/project/tdprepview/" target="_blank" rel="noopener" title="pypi.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/martinhillebrand/tdprepview" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.footer", "search.highlight", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

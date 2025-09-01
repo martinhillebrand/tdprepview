@@ -1,0 +1,21 @@
+/* Indent + border for everything except the very first contents block of a function/method */
+.doc-function .doc-contents:not(.first),
+.doc-method .doc-contents:not(.first) {
+  padding-left: 24px;
+  border-left: .05rem solid var(--md-typeset-table-color);
+  margin: 1.2em 0;
+}
+
+/* Also indent class contents (they usually have only one .doc-contents, marked as .first) */
+.doc-class .doc-contents {
+  padding-left: 24px;
+  border-left: .05rem solid var(--md-typeset-table-color);
+  margin: 1.2em 0;
+}
+
+/* Top-level functions: indent body (even if it's .first) */
+.doc-function > .doc-contents {
+  padding-left: 24px;
+  border-left: .05rem solid var(--md-typeset-table-color);
+  margin: 1.2em 0;
+}

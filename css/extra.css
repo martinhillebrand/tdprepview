@@ -1,0 +1,33 @@
+/* Ultra-compact pandas-like DataFrame tables */
+.df-table {
+  margin: 0.02rem 0;
+  overflow-x: auto;
+}
+
+.df-table table {
+  font-family: var(--md-code-font-family, monospace);
+  font-size: 0.28rem;         /* small font */
+  line-height: 0.05;          /* tight lines */
+  border-collapse: collapse;
+  width: auto;
+}
+
+.df-table th,
+.df-table td {
+  padding: 0.5px 0.5px;           /* minimal padding */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.df-table th {
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+[data-md-color-scheme="slate"] .df-table th,
+[data-md-color-scheme="slate"] .df-table td {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+[data-md-color-scheme="slate"] .df-table th {
+  background-color: rgba(255, 255, 255, 0.06);
+}

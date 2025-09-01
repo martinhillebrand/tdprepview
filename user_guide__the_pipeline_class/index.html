@@ -1,0 +1,1747 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/tdprepview/user_guide__the_pipeline_class/">
+      
+      
+        <link rel="prev" href="../getting_started/">
+      
+      
+        <link rel="next" href="../user_guide__automatic_data_prep/">
+      
+      
+      <link rel="icon" href="../img/icon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>The Pipeline Class - tdprepview docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../css/mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="The Pipeline Class - tdprepview docs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://github.com/tdprepview/assets/images/social/user_guide__the_pipeline_class.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://github.com/tdprepview/user_guide__the_pipeline_class/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="The Pipeline Class - tdprepview docs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://github.com/tdprepview/assets/images/social/user_guide__the_pipeline_class.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-pipeline-class" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="tdprepview docs" class="md-header__button md-logo" aria-label="tdprepview docs" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            tdprepview docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Pipeline Class
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="tdprepview docs" class="md-nav__button md-logo" aria-label="tdprepview docs" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    tdprepview docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    The Pipeline Class
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Pipeline Class
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-a-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why a pipeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-selectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Column selectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preprocessors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preprocessors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renaming-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Renaming options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dag-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAG model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-pipeline-syntax-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building a pipeline (syntax patterns)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building a pipeline (syntax patterns)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input-validation-what-will-assert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input validation (what will assert)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naming conventions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depp-dive-into-fitting-what-actually-happens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Depp Dive into Fitting: what actually happens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depp-dive-into-transforming-what-actually-happens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Depp Dive into Transforming: what actually happens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploying preprocessing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understand-the-produced-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understand the produced query
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_guide__automatic_data_prep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automatic Data Prep
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_reference__pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_reference__auto_code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    auto_code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_reference__preprocessors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Preprocessors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Advanced Topics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced Topics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced_topics__alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alternatives to tdprepview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced_topics__mcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MCP [coming soon]
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-a-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why a pipeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-selectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Column selectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preprocessors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preprocessors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renaming-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Renaming options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dag-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAG model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-pipeline-syntax-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building a pipeline (syntax patterns)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building a pipeline (syntax patterns)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input-validation-what-will-assert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input validation (what will assert)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naming conventions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depp-dive-into-fitting-what-actually-happens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Depp Dive into Fitting: what actually happens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depp-dive-into-transforming-what-actually-happens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Depp Dive into Transforming: what actually happens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploying preprocessing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understand-the-produced-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understand the produced query
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="the-pipeline-class">The Pipeline Class<a class="headerlink" href="#the-pipeline-class" title="Permanent link">#</a></h1>
+<blockquote>
+<p>A practical guide to building, fitting, transforming, deploying, and moving preprocessing logic with <code>tdprepview</code>.</p>
+</blockquote>
+<hr />
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">What is <code>Pipeline</code>?</p>
+<p>A declarative, <strong>SQL-generating</strong> preprocessing pipeline for <strong>Teradata Vantage</strong>.
+ You describe <em>what</em> to do; <code>Pipeline</code> builds a <strong>DAG</strong> and emits a single, reviewable SQL query (or a view).</p>
+</div>
+<details class="tip" open="open">
+<summary>How it differs from scikit-learn pipelines</summary>
+<ul>
+<li><strong>In-DB pushdown</strong>: work happens in Vantage, not in Python.</li>
+<li><strong>DAG, not just a list</strong>: supports fan-in/fan-out nodes.</li>
+<li><strong>SQL output</strong>: get a query or create a view.</li>
+<li><strong>No Python at runtime</strong>: once deployed as SQL/view/JSON, serving doesn’t need a Python process.</li>
+</ul>
+</details>
+<hr />
+<h2 id="why-a-pipeline">Why a pipeline<a class="headerlink" href="#why-a-pipeline" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>Reproducible</strong>: one object defines selection, transforms, and naming.</li>
+<li><strong>Auditable</strong>: SQL is reviewable by DBAs; JSON captures full logic.</li>
+<li><strong>Portable</strong>: use as a DataFrame, a SQL string, a database view, or serialized JSON.</li>
+<li><strong>Clear fit vs transform</strong>: statistics computed during <code>fit</code>, pure SQL during <code>transform</code>.</li>
+</ul>
+<hr />
+<h2 id="core-concepts">Core concepts<a class="headerlink" href="#core-concepts" title="Permanent link">#</a></h2>
+<h3 id="step">Step<a class="headerlink" href="#step" title="Permanent link">#</a></h3>
+<p>A <strong>step</strong> is a tuple: <strong>(input selector, preprocessor(s), optional rename)</strong>.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">tdprepview</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">tdprepview</span> <span class="kn">import</span> <span class="n">Impute</span><span class="p">,</span> <span class="n">Scale</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">,</span> <span class="n">PCA</span><span class="p">,</span> <span class="n">Cast</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="p">([</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;salary&quot;</span><span class="p">],</span> <span class="n">Impute</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">)),</span>          <span class="c1"># (selector, preprocessor)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="p">({</span><span class="s2">&quot;dtype_include&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;int&quot;</span><span class="p">]},</span> <span class="n">Scale</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;zscore&quot;</span><span class="p">)),</span>  <span class="c1"># dict selector</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="p">(</span><span class="s2">&quot;city&quot;</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">categories</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">),</span> <span class="p">{</span><span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;oh_&quot;</span><span class="p">})</span>  <span class="c1"># with rename</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">])</span>
+</span></code></pre></div>
+<h3 id="column-selectors">Column selectors<a class="headerlink" href="#column-selectors" title="Permanent link">#</a></h3>
+<ul>
+<li><code>str</code> → one column</li>
+<li><code>list[str]</code> → explicit columns</li>
+<li>
+<p><code>dict</code> with any of:</p>
+<ul>
+<li><code>prefix</code>, <code>suffix</code>, <code>pattern</code></li>
+<li><code>dtype_include</code>, <code>dtype_exclude</code></li>
+<li><code>columns_exclude</code></li>
+</ul>
+</li>
+</ul>
+<p>Selectors <strong>compose</strong> left-to-right inside the dict (filtering down the current leaves).</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">({</span><span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;num_&quot;</span><span class="p">,</span> <span class="s2">&quot;dtype_exclude&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;varchar&quot;</span><span class="p">]},</span> <span class="n">Scale</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;minmax&quot;</span><span class="p">))</span>
+</span></code></pre></div>
+<h3 id="preprocessors">Preprocessors<a class="headerlink" href="#preprocessors" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Per-column</strong> vs <strong>combined-inputs</strong> (e.g., PCA). Combined inputs create <strong>fan-in</strong> nodes.</li>
+<li><strong>Single-output</strong> vs <strong>multi-output</strong> (affects generated column names).</li>
+</ul>
+<h3 id="renaming-options">Renaming options<a class="headerlink" href="#renaming-options" title="Permanent link">#</a></h3>
+<p>Add <code>{"prefix": "...", "suffix": "..."}</code> to control output names. This is especially useful for chaining:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">({</span><span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;num_&quot;</span><span class="p">},</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="p">[</span><span class="n">Scale</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;zscore&quot;</span><span class="p">),</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">3</span><span class="p">)],</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">{</span><span class="s2">&quot;prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;pca_&quot;</span><span class="p">})</span>
+</span></code></pre></div>
+<h3 id="dag-model">DAG model<a class="headerlink" href="#dag-model" title="Permanent link">#</a></h3>
+<p>Internally a DAG of <code>ColumnNode</code> and <code>PreProcesserNode</code> is built. 
+A <strong>WITH AS</strong> query assembles intermediate steps; <strong>leaves</strong> are the final output columns.</p>
+<hr />
+<h2 id="building-a-pipeline-syntax-patterns">Building a pipeline (syntax patterns)<a class="headerlink" href="#building-a-pipeline-syntax-patterns" title="Permanent link">#</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Minimal</label><label for="__tabbed_1_2">Multi-column</label><label for="__tabbed_1_3">Selector-based</label><label for="__tabbed_1_4">Multi-preprocessor step</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="n">Impute</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">))</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">])</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="p">([</span><span class="s2">&quot;height&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">],</span> <span class="n">Scale</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;zscore&quot;</span><span class="p">))</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">])</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="p">({</span><span class="s2">&quot;pattern&quot;</span><span class="p">:</span> <span class="s2">&quot;num_&quot;</span><span class="p">},</span> <span class="n">Scale</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;minmax&quot;</span><span class="p">)),</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="p">({</span><span class="s2">&quot;suffix&quot;</span><span class="p">:</span> <span class="s2">&quot;_cat&quot;</span><span class="p">},</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">categories</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">),</span> <span class="p">{</span><span class="s2">&quot;suffix&quot;</span><span class="p">:</span> <span class="s2">&quot;_oh&quot;</span><span class="p">})</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">])</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="p">([</span><span class="s2">&quot;income&quot;</span><span class="p">],</span> <span class="p">[</span><span class="n">Impute</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">),</span> <span class="n">Scale</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;zscore&quot;</span><span class="p">)],</span> <span class="p">{</span><span class="s2">&quot;suffix&quot;</span><span class="p">:</span> <span class="s2">&quot;_scaled&quot;</span><span class="p">})</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">])</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<details class="info" open="open">
+<summary>Step expansion rule (when you pass a <strong>list</strong> of preprocessors + options)</summary>
+<ul>
+<li>The <strong>first</strong> preprocessor runs with your provided <code>prefix</code>/<code>suffix</code>.</li>
+<li><strong>Subsequent</strong> preprocessors are <strong>auto-rewired</strong> to take the renamed outputs as inputs, and run <strong>without</strong> re-applying the rename.</li>
+<li>For dict selectors, <code>prefix</code>/<code>suffix</code> are <strong>composed</strong> when chaining (pattern is removed to avoid ambiguity).</li>
+</ul>
+</details>
+<h3 id="input-validation-what-will-assert">Input validation (what will assert)<a class="headerlink" href="#input-validation-what-will-assert" title="Permanent link">#</a></h3>
+<ul>
+<li>Steps must be tuples of length 2 or 3.</li>
+<li>Selectors must be <code>str | list[str] | dict</code> with <strong>only</strong> allowed keys.</li>
+<li>Lists must be deduplicated (<code>["a","a"]</code> will assert).</li>
+<li>Preprocessors must be instances of <code>Preprocessor</code> (or a list of them).</li>
+<li>Rename options accept only <code>"prefix"</code> / <code>"suffix"</code> strings.</li>
+</ul>
+<h3 id="naming-conventions">Naming conventions<a class="headerlink" href="#naming-conventions" title="Permanent link">#</a></h3>
+<p>Prefer early, explicit renames to avoid collisions and to make downstream selectors stable (e.g., prefix PCA outputs with <code>pca_…</code>).</p>
+<hr />
+<h2 id="depp-dive-into-fitting-what-actually-happens">Depp Dive into Fitting: what actually happens<a class="headerlink" href="#depp-dive-into-fitting-what-actually-happens" title="Permanent link">#</a></h2>
+<ol>
+<li>
+<p><strong>Requirements</strong></p>
+<ul>
+<li>A live <code>teradataml</code> context.</li>
+<li>Provide <strong>either</strong> <code>DF</code> <strong>or</strong> <code>schema_name</code> + <code>table_name</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>DAG growth</strong></p>
+<ul>
+<li>For each step, the selector resolves against <strong>current leaves</strong>.</li>
+<li>Nodes are appended; combined-input preprocessors create fan-in.</li>
+</ul>
+</li>
+<li>
+<p><strong>Statistics collection (only if needed)</strong></p>
+<ul>
+<li>Triggered by <code>preprocessor.necessary_statistics</code>.</li>
+<li>
+<p>Sources:</p>
+<ul>
+<li><strong>In-DB</strong>: <code>UnivariateStatistics</code> (mean, std, median, percentiles), <strong>top values</strong>, <strong>top tokens</strong>.</li>
+<li><strong>sklearn helpers</strong> (when applicable): e.g., IterativeImputer params, PCA loadings, decision tree bin edges, power transform lambdas.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Stored after fit</strong></p>
+<ul>
+<li>The constructed DAG and any fitted statistics per node.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="depp-dive-into-transforming-what-actually-happens">Depp Dive into Transforming: what actually happens<a class="headerlink" href="#depp-dive-into-transforming-what-actually-happens" title="Permanent link">#</a></h2>
+<ul>
+<li>
+<p>Inputs: <code>DF</code> <strong>or</strong> <code>schema/table</code> (same checks as <code>fit</code>).</p>
+</li>
+<li>
+<p>Outputs via <code>return_type</code>:</p>
+<ul>
+<li><code>"df"</code> → <code>tdml.DataFrame</code> (default)</li>
+<li><code>"str"</code> → SQL string</li>
+<li><code>None</code> → side-effects only (e.g., create view)</li>
+</ul>
+</li>
+<li>
+<p><strong>Column forwarding &amp; resilience</strong></p>
+<ul>
+<li>Columns <strong>present in DF but not in DAG</strong> are forwarded unchanged.</li>
+<li>Columns <strong>expected by DAG but missing in DF</strong> are skipped.</li>
+</ul>
+</li>
+<li>
+<p>Deterministic as long as schema and dtypes match what you fitted on.</p>
+</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Return DataFrame</label><label for="__tabbed_2_2">Return SQL</label><label for="__tabbed_2_3">Create/replace view</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">DF_out</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">schema_name</span><span class="o">=</span><span class="s2">&quot;scoring_schema&quot;</span><span class="p">,</span> <span class="n">table_name</span><span class="o">=</span><span class="s2">&quot;raw_view&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">sql</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">DF</span><span class="o">=</span><span class="n">DF_in</span><span class="p">,</span> <span class="n">return_type</span><span class="o">=</span><span class="s2">&quot;str&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">pl</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="n">DF</span><span class="o">=</span><span class="n">DF_in</span><span class="p">,</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="n">return_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="n">create_replace_view</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="n">output_schema_name</span><span class="o">=</span><span class="s2">&quot;prod_features&quot;</span><span class="p">,</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="n">output_view_name</span><span class="o">=</span><span class="s2">&quot;customer_prepared&quot;</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="p">)</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="c1"># later:</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="n">DF_out</span> <span class="o">=</span> <span class="n">tdml</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">tdml</span><span class="o">.</span><span class="n">in_schema</span><span class="p">(</span><span class="s2">&quot;prod_features&quot;</span><span class="p">,</span> <span class="s2">&quot;customer_prepared&quot;</span><span class="p">))</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="deploying-preprocessing">Deploying preprocessing<a class="headerlink" href="#deploying-preprocessing" title="Permanent link">#</a></h2>
+<p>Think of three persistence strategies:</p>
+<ol>
+<li>
+<p><strong>Persist a single run</strong>
+   Materialize or create a <strong>view</strong> once; downstream jobs just read it.</p>
+</li>
+<li>
+<p><strong>Persist the query</strong>
+   Use <code>create_replace_view=True</code> as a "<strong>deploy button</strong>." The logic becomes a database view that always reflects the current base table.</p>
+</li>
+<li>
+<p><strong>Persist the logic</strong>
+   Serialize to JSON. Python needed to reconstruct query at serve time; you can store the JSON in a CLOB for governance and later <strong>reconstruct</strong> the pipeline.</p>
+</li>
+</ol>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># 1) Get SQL once</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">sql</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">schema_name</span><span class="o">=</span><span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="n">table_name</span><span class="o">=</span><span class="s2">&quot;t&quot;</span><span class="p">,</span> <span class="n">return_type</span><span class="o">=</span><span class="s2">&quot;str&quot;</span><span class="p">)</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="c1"># 2) Deploy as view</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="n">pl</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">DF</span><span class="o">=</span><span class="n">DF_in</span><span class="p">,</span> <span class="n">return_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">create_replace_view</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="n">output_schema_name</span><span class="o">=</span><span class="s2">&quot;prod&quot;</span><span class="p">,</span> <span class="n">output_view_name</span><span class="o">=</span><span class="s2">&quot;features_v&quot;</span><span class="p">)</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="c1"># 3) Store logic as JSON</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="n">pl</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="s2">&quot;pipeline.json&quot;</span><span class="p">)</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="c1"># ... store file content in a CLOB column for versioning</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="n">restored</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="s2">&quot;pipeline.json&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<details class="tip" open="open">
+<summary>Versioning ideas</summary>
+<ul>
+<li>Store each JSON in a table with metadata (hash, author, created_at).</li>
+</ul>
+</details>
+<hr />
+<h2 id="visualization">Visualization<a class="headerlink" href="#visualization" title="Permanent link">#</a></h2>
+<p>Use a Sankey diagram to inspect lineage and fan-in/fan-out.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">plot_sankey</span><span class="p">()</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">900</span><span class="p">)</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<details class="success">
+<summary>Sankey Output</summary>
+<p><div style="width:100%; height:1000px; border:none;">
+  <iframe src="../assets/pl_sankey.html" style="width:100%; height:100%; border:none;"></iframe>
+</div></p>
+</details>
+<hr />
+<h2 id="understand-the-produced-query">Understand the produced query<a class="headerlink" href="#understand-the-produced-query" title="Permanent link">#</a></h2>
+<p>Assuming this is the input data</p>
+<details class="note">
+<summary>Input Data</summary>
+<div class="df-table">
+<table>
+<thead>
+<tr>
+<th>customerid</th>
+<th>exited</th>
+<th>surname</th>
+<th>creditscore</th>
+<th>geography</th>
+<th>gender</th>
+<th>age</th>
+<th>tenure</th>
+<th>balance</th>
+<th>hascrcard</th>
+<th>isactivemember</th>
+<th>estimatedsalary</th>
+<th>bank_products</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15768104</td>
+<td>0</td>
+<td>Wright</td>
+<td>788</td>
+<td>Spain</td>
+<td>Male</td>
+<td>37.0</td>
+<td>8</td>
+<td>141541.25</td>
+<td>0</td>
+<td>0</td>
+<td>66013.27</td>
+<td>RetirementAccount</td>
+</tr>
+<tr>
+<td>15809826</td>
+<td>1</td>
+<td>Craigie</td>
+<td>728</td>
+<td>France</td>
+<td>Female</td>
+<td>46.0</td>
+<td>2</td>
+<td>109705.52</td>
+<td>1</td>
+<td>0</td>
+<td>20276.87</td>
+<td>PersonalLoan</td>
+</tr>
+<tr>
+<td>15717736</td>
+<td>0</td>
+<td>Dr. Shen</td>
+<td>639</td>
+<td>Germany</td>
+<td>Female</td>
+<td>46.0</td>
+<td>10</td>
+<td>110031.09</td>
+<td>1</td>
+<td>1</td>
+<td>133995.59</td>
+<td>CertificateOfDeposit,CheckingAccount</td>
+</tr>
+<tr>
+<td>15748589</td>
+<td>0</td>
+<td>Winter</td>
+<td>736</td>
+<td>France</td>
+<td>Female</td>
+<td>30.0</td>
+<td>9</td>
+<td>0.0</td>
+<td>1</td>
+<td>0</td>
+<td>34180.33</td>
+<td>CreditCard,HomeEquityLoan</td>
+</tr>
+<tr>
+<td>15704053</td>
+<td>1</td>
+<td>T'ang</td>
+<td>710</td>
+<td>Spain</td>
+<td>Male</td>
+<td>62.0</td>
+<td>3</td>
+<td>131078.42</td>
+<td>1</td>
+<td>0</td>
+<td>119348.76</td>
+<td>RetirementAccount,PersonalLoan</td>
+</tr>
+<tr>
+<td>15806808</td>
+<td>1</td>
+<td>Hope</td>
+<td>834</td>
+<td>Germany</td>
+<td>Female</td>
+<td>None</td>
+<td>8</td>
+<td>112281.60</td>
+<td>1</td>
+<td>0</td>
+<td>140225.14</td>
+<td>CheckingAccount,AutoLoan,RetirementAccount</td>
+</tr>
+<tr>
+<td>15694530</td>
+<td>0</td>
+<td>Porter</td>
+<td>672</td>
+<td>France</td>
+<td>Male</td>
+<td>28.0</td>
+<td>4</td>
+<td>167268.98</td>
+<td>1</td>
+<td>1</td>
+<td>169469.30</td>
+<td>HomeEquityLoan</td>
+</tr>
+<tr>
+<td>15712903</td>
+<td>0</td>
+<td>Diaz</td>
+<td>499</td>
+<td>France</td>
+<td>Female</td>
+<td>21.0</td>
+<td>3</td>
+<td>176511.08</td>
+<td>1</td>
+<td>1</td>
+<td>153920.22</td>
+<td>InvestmentFund</td>
+</tr>
+<tr>
+<td>15791045</td>
+<td>0</td>
+<td>Boni</td>
+<td>568</td>
+<td>France</td>
+<td>Female</td>
+<td>38.0</td>
+<td>3</td>
+<td>132951.92</td>
+<td>0</td>
+<td>1</td>
+<td>124486.28</td>
+<td>RetirementAccount</td>
+</tr>
+<tr>
+<td>15803790</td>
+<td>0</td>
+<td>Allen</td>
+<td>638</td>
+<td>Germany</td>
+<td>Male</td>
+<td>37.0</td>
+<td>2</td>
+<td>89728.86</td>
+<td>1</td>
+<td>1</td>
+<td>37294.88</td>
+<td>CertificateOfDeposit,PersonalLoan</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<p>and assuming this is the Pipeline plan we have produced</p>
+<details class="note">
+<summary>Pipeline steps</summary>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">import</span> <span class="nn">tdprepview</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">steps</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    <span class="p">([</span><span class="s1">&#39;creditscore&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;tenure&#39;</span><span class="p">,</span> <span class="s1">&#39;balance&#39;</span><span class="p">,</span> <span class="s1">&#39;estimatedsalary&#39;</span><span class="p">],</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>        <span class="n">tdprepview</span><span class="o">.</span><span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">)),</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    <span class="p">([</span><span class="s1">&#39;geography&#39;</span><span class="p">,</span> <span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="s1">&#39;bank_products&#39;</span><span class="p">],</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>        <span class="n">tdprepview</span><span class="o">.</span><span class="n">ImputeText</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;mode&#39;</span><span class="p">)),</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    <span class="p">([</span><span class="s1">&#39;hascrcard&#39;</span><span class="p">,</span> <span class="s1">&#39;isactivemember&#39;</span><span class="p">],</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>        <span class="n">tdprepview</span><span class="o">.</span><span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;most_frequent&#39;</span><span class="p">)),</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>    <span class="p">([</span><span class="s1">&#39;creditscore&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;tenure&#39;</span><span class="p">,</span> <span class="s1">&#39;balance&#39;</span><span class="p">,</span> <span class="s1">&#39;estimatedsalary&#39;</span><span class="p">],</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>        <span class="n">tdprepview</span><span class="o">.</span><span class="n">MinMaxScaler</span><span class="p">()),</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>    <span class="p">([</span><span class="s1">&#39;age&#39;</span><span class="p">],</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>        <span class="n">tdprepview</span><span class="o">.</span><span class="n">PowerTransformer</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;yeo-johnson&#39;</span><span class="p">)),</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>    <span class="p">([</span><span class="s1">&#39;geography&#39;</span><span class="p">],</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>        <span class="n">tdprepview</span><span class="o">.</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">max_categories</span><span class="o">=</span><span class="mi">20</span><span class="p">)),</span>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>    <span class="p">([</span><span class="s1">&#39;gender&#39;</span><span class="p">],</span>
+</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>        <span class="n">tdprepview</span><span class="o">.</span><span class="n">LabelEncoder</span><span class="p">(</span><span class="n">elements</span><span class="o">=</span><span class="s1">&#39;TOP1&#39;</span><span class="p">)),</span>
+</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>
+</span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>    <span class="p">([</span><span class="s1">&#39;bank_products&#39;</span><span class="p">],</span>
+</span><span id="__span-12-25"><a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a>        <span class="n">tdprepview</span><span class="o">.</span><span class="n">MultiLabelBinarizer</span><span class="p">(</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">max_categories</span><span class="o">=</span><span class="mi">20</span><span class="p">)),</span>
+</span><span id="__span-12-26"><a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a>
+</span><span id="__span-12-27"><a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a>    <span class="p">({</span><span class="s1">&#39;columns_exclude&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;customerid&#39;</span><span class="p">,</span> <span class="s1">&#39;exited&#39;</span><span class="p">,</span> <span class="s1">&#39;surname&#39;</span><span class="p">]},</span>
+</span><span id="__span-12-28"><a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a>        <span class="n">tdprepview</span><span class="o">.</span><span class="n">Cast</span><span class="p">(</span><span class="n">new_type</span><span class="o">=</span><span class="s1">&#39;FLOAT&#39;</span><span class="p">))</span>
+</span><span id="__span-12-29"><a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="p">]</span>
+</span><span id="__span-12-30"><a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a>
+</span><span id="__span-12-31"><a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a><span class="n">pl</span> <span class="o">=</span> <span class="n">tdprepview</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span>
+</span></code></pre></div>
+</details>
+<p>After fitting, we get this query. Hover over the annotations to understand where each piece comes from.</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">WITH</span><span class="w"> </span><span class="n">preprocessing_steps</span><span class="w"> </span><span class="k">AS</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="p">(</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">SELECT</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">   </span><span class="n">customerid</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_0</span><span class="p">,</span><span class="w"> </span><span class="c1">-- (1)!</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">   </span><span class="n">exited</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_1</span><span class="p">,</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">   </span><span class="n">surname</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_2</span><span class="p">,</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">   </span><span class="n">creditscore</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_3</span><span class="p">,</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">   </span><span class="n">geography</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_4</span><span class="p">,</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">   </span><span class="n">gender</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_5</span><span class="p">,</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">   </span><span class="n">age</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_6</span><span class="p">,</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">   </span><span class="n">tenure</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_7</span><span class="p">,</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">   </span><span class="n">balance</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_8</span><span class="p">,</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">   </span><span class="n">hascrcard</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_9</span><span class="p">,</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">   </span><span class="n">isactivemember</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_10</span><span class="p">,</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">   </span><span class="n">estimatedsalary</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_11</span><span class="p">,</span>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">   </span><span class="n">bank_products</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_12</span><span class="p">,</span>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">   </span><span class="k">COALESCE</span><span class="p">(</span><span class="w"> </span><span class="n">c_i_3</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">650</span><span class="p">.</span><span class="mi">7018</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_13</span><span class="p">,</span><span class="w"> </span><span class="c1">-- (2)!</span>
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">   </span><span class="k">COALESCE</span><span class="p">(</span><span class="w"> </span><span class="n">c_i_4</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;France&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_18</span><span class="p">,</span><span class="w"> </span><span class="c1">-- (3)!</span>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">   </span><span class="k">COALESCE</span><span class="p">(</span><span class="w"> </span><span class="n">c_i_5</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Male&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_19</span><span class="p">,</span>
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="w">   </span><span class="k">COALESCE</span><span class="p">(</span><span class="w"> </span><span class="n">c_i_6</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">38</span><span class="p">.</span><span class="mi">87352</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_14</span><span class="p">,</span>
+</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="w">   </span><span class="k">COALESCE</span><span class="p">(</span><span class="w"> </span><span class="n">c_i_7</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">.</span><span class="mi">9726</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_15</span><span class="p">,</span>
+</span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="w">   </span><span class="k">COALESCE</span><span class="p">(</span><span class="w"> </span><span class="n">c_i_8</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">75582</span><span class="p">.</span><span class="mi">44</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_16</span><span class="p">,</span>
+</span><span id="__span-13-23"><a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="w">   </span><span class="k">COALESCE</span><span class="p">(</span><span class="w"> </span><span class="n">c_i_9</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_21</span><span class="p">,</span><span class="w"> </span><span class="c1">-- (4)!</span>
+</span><span id="__span-13-24"><a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a><span class="w">   </span><span class="k">COALESCE</span><span class="p">(</span><span class="w"> </span><span class="n">c_i_10</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_22</span><span class="p">,</span>
+</span><span id="__span-13-25"><a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="w">   </span><span class="k">COALESCE</span><span class="p">(</span><span class="w"> </span><span class="n">c_i_11</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">100690</span><span class="p">.</span><span class="mi">6</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_17</span><span class="p">,</span>
+</span><span id="__span-13-26"><a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a><span class="w">   </span><span class="k">COALESCE</span><span class="p">(</span><span class="w"> </span><span class="n">c_i_12</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;RetirementAccount&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_20</span><span class="p">,</span>
+</span><span id="__span-13-27"><a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a><span class="w">   </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">c_i_13</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="mi">350</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">NULLIF</span><span class="p">(</span><span class="w"> </span><span class="mi">500</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">  </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_23</span><span class="p">,</span><span class="w"> </span><span class="c1">-- (5)!</span>
+</span><span id="__span-13-28"><a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a><span class="w">   </span><span class="k">CASE</span><span class="w"> </span><span class="n">c_i_18</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="s1">&#39;France&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="w">  </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_29</span><span class="p">,</span><span class="w"> </span><span class="c1">-- (6)!</span>
+</span><span id="__span-13-29"><a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a><span class="w">   </span><span class="k">CASE</span><span class="w"> </span><span class="n">c_i_18</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="s1">&#39;Germany&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="w">  </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_30</span><span class="p">,</span>
+</span><span id="__span-13-30"><a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a><span class="w">   </span><span class="k">CASE</span><span class="w"> </span><span class="n">c_i_18</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="s1">&#39;Spain&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="w">  </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_31</span><span class="p">,</span>
+</span><span id="__span-13-31"><a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a><span class="w">   </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_18</span><span class="p">)</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;France&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Germany&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Spain&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="w">  </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_32</span><span class="p">,</span>
+</span><span id="__span-13-32"><a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a><span class="w">   </span><span class="k">CASE</span><span class="w"> </span><span class="n">c_i_19</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="s1">&#39;Male&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="w">  </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_33</span><span class="p">,</span><span class="w"> </span><span class="c1">-- (7)!</span>
+</span><span id="__span-13-33"><a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a><span class="w">   </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">c_i_14</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="mi">18</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">NULLIF</span><span class="p">(</span><span class="w"> </span><span class="mi">74</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">  </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_24</span><span class="p">,</span>
+</span><span id="__span-13-34"><a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a><span class="w">   </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">c_i_15</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">NULLIF</span><span class="p">(</span><span class="w"> </span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">  </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_25</span><span class="p">,</span>
+</span><span id="__span-13-35"><a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a><span class="w">   </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">c_i_16</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">NULLIF</span><span class="p">(</span><span class="w"> </span><span class="mi">250898</span><span class="p">.</span><span class="mi">1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">  </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_26</span><span class="p">,</span>
+</span><span id="__span-13-36"><a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_21</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_53</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-13-37"><a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_22</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_54</span><span class="p">,</span>
+</span><span id="__span-13-38"><a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a><span class="w">   </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">c_i_17</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="mi">11</span><span class="p">.</span><span class="mi">58</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">NULLIF</span><span class="p">(</span><span class="w"> </span><span class="mi">199941</span><span class="p">.</span><span class="mi">8</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">  </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_27</span><span class="p">,</span>
+</span><span id="__span-13-39"><a id="__codelineno-13-39" name="__codelineno-13-39" href="#__codelineno-13-39"></a><span class="w">   </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="k">POSITION</span><span class="p">(</span><span class="s1">&#39;,MortgageLoan,&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="o">||</span><span class="n">c_i_20</span><span class="o">||</span><span class="s1">&#39;,&#39;</span><span class="p">))</span><span class="o">&gt;</span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_34</span><span class="p">,</span><span class="w"> </span><span class="c1">-- (9)!</span>
+</span><span id="__span-13-40"><a id="__codelineno-13-40" name="__codelineno-13-40" href="#__codelineno-13-40"></a><span class="w">   </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="k">POSITION</span><span class="p">(</span><span class="s1">&#39;,RetirementAccount,&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="o">||</span><span class="n">c_i_20</span><span class="o">||</span><span class="s1">&#39;,&#39;</span><span class="p">))</span><span class="o">&gt;</span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_35</span><span class="p">,</span>
+</span><span id="__span-13-41"><a id="__codelineno-13-41" name="__codelineno-13-41" href="#__codelineno-13-41"></a><span class="w">   </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="k">POSITION</span><span class="p">(</span><span class="s1">&#39;,CreditCard,&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="o">||</span><span class="n">c_i_20</span><span class="o">||</span><span class="s1">&#39;,&#39;</span><span class="p">))</span><span class="o">&gt;</span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_36</span><span class="p">,</span>
+</span><span id="__span-13-42"><a id="__codelineno-13-42" name="__codelineno-13-42" href="#__codelineno-13-42"></a><span class="w">   </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="k">POSITION</span><span class="p">(</span><span class="s1">&#39;,InvestmentFund,&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="o">||</span><span class="n">c_i_20</span><span class="o">||</span><span class="s1">&#39;,&#39;</span><span class="p">))</span><span class="o">&gt;</span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_37</span><span class="p">,</span>
+</span><span id="__span-13-43"><a id="__codelineno-13-43" name="__codelineno-13-43" href="#__codelineno-13-43"></a><span class="w">   </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="k">POSITION</span><span class="p">(</span><span class="s1">&#39;,HomeEquityLoan,&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="o">||</span><span class="n">c_i_20</span><span class="o">||</span><span class="s1">&#39;,&#39;</span><span class="p">))</span><span class="o">&gt;</span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_38</span><span class="p">,</span>
+</span><span id="__span-13-44"><a id="__codelineno-13-44" name="__codelineno-13-44" href="#__codelineno-13-44"></a><span class="w">   </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="k">POSITION</span><span class="p">(</span><span class="s1">&#39;,PersonalLoan,&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="o">||</span><span class="n">c_i_20</span><span class="o">||</span><span class="s1">&#39;,&#39;</span><span class="p">))</span><span class="o">&gt;</span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_39</span><span class="p">,</span>
+</span><span id="__span-13-45"><a id="__codelineno-13-45" name="__codelineno-13-45" href="#__codelineno-13-45"></a><span class="w">   </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="k">POSITION</span><span class="p">(</span><span class="s1">&#39;,CheckingAccount,&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="o">||</span><span class="n">c_i_20</span><span class="o">||</span><span class="s1">&#39;,&#39;</span><span class="p">))</span><span class="o">&gt;</span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_40</span><span class="p">,</span>
+</span><span id="__span-13-46"><a id="__codelineno-13-46" name="__codelineno-13-46" href="#__codelineno-13-46"></a><span class="w">   </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="k">POSITION</span><span class="p">(</span><span class="s1">&#39;,SavingsAccount,&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="o">||</span><span class="n">c_i_20</span><span class="o">||</span><span class="s1">&#39;,&#39;</span><span class="p">))</span><span class="o">&gt;</span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_41</span><span class="p">,</span>
+</span><span id="__span-13-47"><a id="__codelineno-13-47" name="__codelineno-13-47" href="#__codelineno-13-47"></a><span class="w">   </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="k">POSITION</span><span class="p">(</span><span class="s1">&#39;,CertificateOfDeposit,&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="o">||</span><span class="n">c_i_20</span><span class="o">||</span><span class="s1">&#39;,&#39;</span><span class="p">))</span><span class="o">&gt;</span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_42</span><span class="p">,</span>
+</span><span id="__span-13-48"><a id="__codelineno-13-48" name="__codelineno-13-48" href="#__codelineno-13-48"></a><span class="w">   </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="k">POSITION</span><span class="p">(</span><span class="s1">&#39;,AutoLoan,&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="o">||</span><span class="n">c_i_20</span><span class="o">||</span><span class="s1">&#39;,&#39;</span><span class="p">))</span><span class="o">&gt;</span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_43</span><span class="p">,</span>
+</span><span id="__span-13-49"><a id="__codelineno-13-49" name="__codelineno-13-49" href="#__codelineno-13-49"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_23</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_44</span><span class="p">,</span><span class="w"> </span><span class="c1">-- (10)!</span>
+</span><span id="__span-13-50"><a id="__codelineno-13-50" name="__codelineno-13-50" href="#__codelineno-13-50"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_29</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_45</span><span class="p">,</span>
+</span><span id="__span-13-51"><a id="__codelineno-13-51" name="__codelineno-13-51" href="#__codelineno-13-51"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_30</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_46</span><span class="p">,</span>
+</span><span id="__span-13-52"><a id="__codelineno-13-52" name="__codelineno-13-52" href="#__codelineno-13-52"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_31</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_47</span><span class="p">,</span>
+</span><span id="__span-13-53"><a id="__codelineno-13-53" name="__codelineno-13-53" href="#__codelineno-13-53"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_32</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_48</span><span class="p">,</span>
+</span><span id="__span-13-54"><a id="__codelineno-13-54" name="__codelineno-13-54" href="#__codelineno-13-54"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_33</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_49</span><span class="p">,</span>
+</span><span id="__span-13-55"><a id="__codelineno-13-55" name="__codelineno-13-55" href="#__codelineno-13-55"></a><span class="w">   </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">c_i_24</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="p">(</span><span class="n">POWER</span><span class="p">(</span><span class="n">c_i_24</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">968491</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">968491</span><span class="p">)</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="n">POWER</span><span class="p">(</span><span class="o">-</span><span class="n">c_i_24</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="o">-</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">968491</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">-</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">968491</span><span class="p">))</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_28</span><span class="p">,</span><span class="w"> </span><span class="c1">-- (8)!</span>
+</span><span id="__span-13-56"><a id="__codelineno-13-56" name="__codelineno-13-56" href="#__codelineno-13-56"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_25</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_51</span><span class="p">,</span>
+</span><span id="__span-13-57"><a id="__codelineno-13-57" name="__codelineno-13-57" href="#__codelineno-13-57"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_26</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_52</span><span class="p">,</span>
+</span><span id="__span-13-58"><a id="__codelineno-13-58" name="__codelineno-13-58" href="#__codelineno-13-58"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_27</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_55</span><span class="p">,</span>
+</span><span id="__span-13-59"><a id="__codelineno-13-59" name="__codelineno-13-59" href="#__codelineno-13-59"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_34</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_56</span><span class="p">,</span>
+</span><span id="__span-13-60"><a id="__codelineno-13-60" name="__codelineno-13-60" href="#__codelineno-13-60"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_35</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_57</span><span class="p">,</span>
+</span><span id="__span-13-61"><a id="__codelineno-13-61" name="__codelineno-13-61" href="#__codelineno-13-61"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_36</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_58</span><span class="p">,</span>
+</span><span id="__span-13-62"><a id="__codelineno-13-62" name="__codelineno-13-62" href="#__codelineno-13-62"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_37</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_59</span><span class="p">,</span>
+</span><span id="__span-13-63"><a id="__codelineno-13-63" name="__codelineno-13-63" href="#__codelineno-13-63"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_38</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_60</span><span class="p">,</span>
+</span><span id="__span-13-64"><a id="__codelineno-13-64" name="__codelineno-13-64" href="#__codelineno-13-64"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_39</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_61</span><span class="p">,</span>
+</span><span id="__span-13-65"><a id="__codelineno-13-65" name="__codelineno-13-65" href="#__codelineno-13-65"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_40</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_62</span><span class="p">,</span>
+</span><span id="__span-13-66"><a id="__codelineno-13-66" name="__codelineno-13-66" href="#__codelineno-13-66"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_41</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_63</span><span class="p">,</span>
+</span><span id="__span-13-67"><a id="__codelineno-13-67" name="__codelineno-13-67" href="#__codelineno-13-67"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_42</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_64</span><span class="p">,</span>
+</span><span id="__span-13-68"><a id="__codelineno-13-68" name="__codelineno-13-68" href="#__codelineno-13-68"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_43</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_65</span><span class="p">,</span>
+</span><span id="__span-13-69"><a id="__codelineno-13-69" name="__codelineno-13-69" href="#__codelineno-13-69"></a><span class="w">   </span><span class="k">CAST</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">c_i_28</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">c_i_50</span>
+</span><span id="__span-13-70"><a id="__codelineno-13-70" name="__codelineno-13-70" href="#__codelineno-13-70"></a><span class="k">FROM</span>
+</span><span id="__span-13-71"><a id="__codelineno-13-71" name="__codelineno-13-71" href="#__codelineno-13-71"></a><span class="w">   </span><span class="n">demo_user</span><span class="p">.</span><span class="n">order_raw_trainig</span><span class="w"> </span><span class="n">t</span>
+</span><span id="__span-13-72"><a id="__codelineno-13-72" name="__codelineno-13-72" href="#__codelineno-13-72"></a><span class="p">)</span>
+</span><span id="__span-13-73"><a id="__codelineno-13-73" name="__codelineno-13-73" href="#__codelineno-13-73"></a>
+</span><span id="__span-13-74"><a id="__codelineno-13-74" name="__codelineno-13-74" href="#__codelineno-13-74"></a><span class="k">SELECT</span>
+</span><span id="__span-13-75"><a id="__codelineno-13-75" name="__codelineno-13-75" href="#__codelineno-13-75"></a><span class="w">   </span><span class="n">c_i_0</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">customerid</span><span class="p">,</span><span class="w"> </span><span class="c1">-- (11)!</span>
+</span><span id="__span-13-76"><a id="__codelineno-13-76" name="__codelineno-13-76" href="#__codelineno-13-76"></a><span class="w">   </span><span class="n">c_i_1</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">exited</span><span class="p">,</span>
+</span><span id="__span-13-77"><a id="__codelineno-13-77" name="__codelineno-13-77" href="#__codelineno-13-77"></a><span class="w">   </span><span class="n">c_i_2</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">surname</span><span class="p">,</span>
+</span><span id="__span-13-78"><a id="__codelineno-13-78" name="__codelineno-13-78" href="#__codelineno-13-78"></a><span class="w">   </span><span class="n">c_i_44</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">creditscore</span><span class="p">,</span>
+</span><span id="__span-13-79"><a id="__codelineno-13-79" name="__codelineno-13-79" href="#__codelineno-13-79"></a><span class="w">   </span><span class="n">c_i_45</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">geography__OHE_1_France</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-13-80"><a id="__codelineno-13-80" name="__codelineno-13-80" href="#__codelineno-13-80"></a><span class="w">   </span><span class="n">c_i_46</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">geography__OHE_2_Germany</span><span class="p">,</span>
+</span><span id="__span-13-81"><a id="__codelineno-13-81" name="__codelineno-13-81" href="#__codelineno-13-81"></a><span class="w">   </span><span class="n">c_i_47</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">geography__OHE_3_Spain</span><span class="p">,</span>
+</span><span id="__span-13-82"><a id="__codelineno-13-82" name="__codelineno-13-82" href="#__codelineno-13-82"></a><span class="w">   </span><span class="n">c_i_48</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">geography__OHE_0_otherwise</span><span class="p">,</span>
+</span><span id="__span-13-83"><a id="__codelineno-13-83" name="__codelineno-13-83" href="#__codelineno-13-83"></a><span class="w">   </span><span class="n">c_i_49</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">gender</span><span class="p">,</span>
+</span><span id="__span-13-84"><a id="__codelineno-13-84" name="__codelineno-13-84" href="#__codelineno-13-84"></a><span class="w">   </span><span class="n">c_i_50</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">age</span><span class="p">,</span>
+</span><span id="__span-13-85"><a id="__codelineno-13-85" name="__codelineno-13-85" href="#__codelineno-13-85"></a><span class="w">   </span><span class="n">c_i_51</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">tenure</span><span class="p">,</span>
+</span><span id="__span-13-86"><a id="__codelineno-13-86" name="__codelineno-13-86" href="#__codelineno-13-86"></a><span class="w">   </span><span class="n">c_i_52</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">balance</span><span class="p">,</span>
+</span><span id="__span-13-87"><a id="__codelineno-13-87" name="__codelineno-13-87" href="#__codelineno-13-87"></a><span class="w">   </span><span class="n">c_i_53</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">hascrcard</span><span class="p">,</span>
+</span><span id="__span-13-88"><a id="__codelineno-13-88" name="__codelineno-13-88" href="#__codelineno-13-88"></a><span class="w">   </span><span class="n">c_i_54</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">isactivemember</span><span class="p">,</span>
+</span><span id="__span-13-89"><a id="__codelineno-13-89" name="__codelineno-13-89" href="#__codelineno-13-89"></a><span class="w">   </span><span class="n">c_i_55</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">estimatedsalary</span><span class="p">,</span>
+</span><span id="__span-13-90"><a id="__codelineno-13-90" name="__codelineno-13-90" href="#__codelineno-13-90"></a><span class="w">   </span><span class="n">c_i_56</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">bank_products__MLB_1_MortgageLoan</span><span class="p">,</span><span class="w"> </span><span class="c1">-- (12)!</span>
+</span><span id="__span-13-91"><a id="__codelineno-13-91" name="__codelineno-13-91" href="#__codelineno-13-91"></a><span class="w">   </span><span class="n">c_i_57</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">bank_products__MLB_2_RetirementAccount</span><span class="p">,</span>
+</span><span id="__span-13-92"><a id="__codelineno-13-92" name="__codelineno-13-92" href="#__codelineno-13-92"></a><span class="w">   </span><span class="n">c_i_58</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">bank_products__MLB_3_CreditCard</span><span class="p">,</span>
+</span><span id="__span-13-93"><a id="__codelineno-13-93" name="__codelineno-13-93" href="#__codelineno-13-93"></a><span class="w">   </span><span class="n">c_i_59</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">bank_products__MLB_4_InvestmentFund</span><span class="p">,</span>
+</span><span id="__span-13-94"><a id="__codelineno-13-94" name="__codelineno-13-94" href="#__codelineno-13-94"></a><span class="w">   </span><span class="n">c_i_60</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">bank_products__MLB_5_HomeEquityLoan</span><span class="p">,</span>
+</span><span id="__span-13-95"><a id="__codelineno-13-95" name="__codelineno-13-95" href="#__codelineno-13-95"></a><span class="w">   </span><span class="n">c_i_61</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">bank_products__MLB_6_PersonalLoan</span><span class="p">,</span>
+</span><span id="__span-13-96"><a id="__codelineno-13-96" name="__codelineno-13-96" href="#__codelineno-13-96"></a><span class="w">   </span><span class="n">c_i_62</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">bank_products__MLB_7_CheckingAccount</span><span class="p">,</span>
+</span><span id="__span-13-97"><a id="__codelineno-13-97" name="__codelineno-13-97" href="#__codelineno-13-97"></a><span class="w">   </span><span class="n">c_i_63</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">bank_products__MLB_8_SavingsAccount</span><span class="p">,</span>
+</span><span id="__span-13-98"><a id="__codelineno-13-98" name="__codelineno-13-98" href="#__codelineno-13-98"></a><span class="w">   </span><span class="n">c_i_64</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">bank_products__MLB_9_CertificateOfDeposit</span><span class="p">,</span>
+</span><span id="__span-13-99"><a id="__codelineno-13-99" name="__codelineno-13-99" href="#__codelineno-13-99"></a><span class="w">   </span><span class="n">c_i_65</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">bank_products__MLB_10_AutoLoan</span>
+</span><span id="__span-13-100"><a id="__codelineno-13-100" name="__codelineno-13-100" href="#__codelineno-13-100"></a><span class="k">FROM</span>
+</span><span id="__span-13-101"><a id="__codelineno-13-101" name="__codelineno-13-101" href="#__codelineno-13-101"></a><span class="w">   </span><span class="n">preprocessing_steps</span><span class="w"> </span><span class="n">t</span>
+</span></code></pre></div>
+<ol>
+<li>aliasing of possibly lengthy column names!</li>
+<li><strong>SimpleImputer(strategy='mean')</strong> on numeric columns (<code>creditscore</code>, <code>age</code>, <code>tenure</code>, <code>balance</code>, <code>estimatedsalary</code>) becomes <code>COALESCE(value, learned_mean)</code> → <code>c_i_13..17</code>.</li>
+<li><strong>ImputeText(kind='mode')</strong> on <code>geography</code>, <code>gender</code>, <code>bank_products</code>: <code>COALESCE(text_col, learned_mode)</code> → <code>c_i_18..20</code>.</li>
+<li><strong>SimpleImputer(strategy='most_frequent')</strong> on <code>hascrcard</code>, <code>isactivemember</code>: <code>COALESCE(int_col, mode)</code> → <code>c_i_21..22</code>.</li>
+<li><strong>MinMaxScaler()</strong> on numeric set: <code>(x - min) / NULLIF(range, 0)</code> using fitted stats → <code>c_i_23</code> (<code>creditscore</code> shown), and similarly <code>c_i_24..27</code> for <code>age</code>, <code>tenure</code>, <code>balance</code>, <code>estimatedsalary</code>.</li>
+<li><strong>OneHotEncoder(max_categories=20)</strong> on <code>geography</code>: one column per top category plus “otherwise” bucket → <code>c_i_29..32</code>.</li>
+<li><strong>LabelEncoder(elements='TOP1')</strong> on <code>gender</code>: binary indicator for the top element (here <code>'Male'</code> as 1, else 0) → <code>c_i_33</code>.</li>
+<li><strong>PowerTransformer(method='yeo-johnson')</strong> on <strong>scaled</strong> <code>age</code> (<code>c_i_24</code>): applies learned λ (here ≈ −1.9685) to produce <code>c_i_28</code>.</li>
+<li><strong>MultiLabelBinarizer(delimiter=',')</strong> on <code>bank_products</code>: token presence via <code>POSITION(',Token,' IN ','||col||',')</code> → <code>c_i_34..43</code>.</li>
+<li><strong>Cast(new_type='FLOAT')</strong> on all features except excluded identifiers: ensures numeric dtypes for ML-serving (<code>c_i_44..65</code>, <code>c_i_50</code>, <code>c_i_53..55</code>).</li>
+<li><strong>Forwarding untouched inputs</strong> (no preprocessors applied): <code>customerid</code>, <code>exited</code>, <code>surname</code> are passed through unchanged.</li>
+<li><strong>Final naming</strong> in <code>SELECT</code>: stable, human-readable feature names with suffixes that reflect the preprocessor (<code>__OHE_*</code>, <code>__MLB_*</code>, raw names for scaled/casted numerics).</li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../getting_started/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Getting Started">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Getting Started
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../user_guide__automatic_data_prep/" class="md-footer__link md-footer__link--next" aria-label="Next: Automatic Data Prep">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Automatic Data Prep
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - 2025 Martin Hillebrand
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://pypi.org/project/tdprepview/" target="_blank" rel="noopener" title="pypi.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14 7.5A2.86 2.86 0 0 1 22 10.36v3.78A2.86 2.86 0 0 1 19.14 17H12c0 .39.32.96.71.96H17v1.68a2.86 2.86 0 0 1-2.86 2.86H9.86A2.86 2.86 0 0 1 7 19.64v-3.75a2.85 2.85 0 0 1 2.86-2.85h5.25a2.85 2.85 0 0 0 2.85-2.86V7.5zm-4.28 11.79c-.4 0-.72.3-.72.89s.32.71.72.71a.71.71 0 0 0 .71-.71c0-.59-.32-.89-.71-.89m-10-1.79A2.86 2.86 0 0 1 2 14.64v-3.78A2.86 2.86 0 0 1 4.86 8H12c0-.39-.32-.96-.71-.96H7V5.36A2.86 2.86 0 0 1 9.86 2.5h4.28A2.86 2.86 0 0 1 17 5.36v3.75a2.85 2.85 0 0 1-2.86 2.85H8.89a2.85 2.85 0 0 0-2.85 2.86v2.68zM9.14 5.71c.4 0 .72-.3.72-.89s-.32-.71-.72-.71c-.39 0-.71.12-.71.71s.32.89.71.89"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/martinhillebrand/tdprepview" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.footer", "search.highlight", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
